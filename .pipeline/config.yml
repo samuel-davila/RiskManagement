@@ -20,9 +20,9 @@ general:
     Build:
       mavenExecuteStaticCodeChecks: false
       npmExecuteLint: false
-      Additional Unit Tests:
-        npmExecuteScripts: false
-        karmaExecuteScripts: false
+    Additional Unit Tests:
+      npmExecuteScripts: false
+      karmaExecuteScripts: false
 
 
     Release:
@@ -38,8 +38,8 @@ general:
       credentialsId: "github"
       appName: "Risks"
     mtaDeployParameters: "-f --version-rule ALL"
-    artifactPrepareVersion:
-      versioningType: "cloud_noTag"
+  artifactPrepareVersion:
+    versioningType: "cloud_noTag"
 
 
 ### Step-specific configuration

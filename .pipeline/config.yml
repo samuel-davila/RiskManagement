@@ -15,21 +15,20 @@ general:
 #  inferBuildTool: true
  pipeline: "sap-cloud-sdk"
  buildTool: "mta"
- stages:
+
+stages:
  
-    Build:
-      mavenExecuteStaticCodeChecks: false
-      npmExecuteLint: false
-    Additional Unit Tests:
-      npmExecuteScripts: false
-      karmaExecuteScripts: false
+  Build:
+    mavenExecuteStaticCodeChecks: false
+    npmExecuteLint: false
+  Additional Unit Tests:
+    npmExecuteScripts: false
+    karmaExecuteScripts: false
+  Release:
+    cloudFoundryDeploy: true
+    tmsUpload: false
 
-
-    Release:
-      cloudFoundryDeploy: true
-      tmsUpload: false
-
- steps:
+steps:
   cloudFoundryDeploy:
     cloudFoundry:
       apiEndpoint: "https://api.cf.us10.hana.ondemand.com"

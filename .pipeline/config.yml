@@ -34,7 +34,7 @@ steps:
       apiEndpoint: "https://api.cf.us10.hana.ondemand.com"
       org: "ca4e0d70trial"
       space: "dev"
-      credentialsId: "github"
+      credentialsId: "cfdeploy"
       appName: "Risks"
     mtaDeployParameters: "-f --version-rule ALL"
   artifactPrepareVersion:
